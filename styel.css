@@ -1,0 +1,195 @@
+/* پس‌زمینه و کل سایت */
+body {
+    font-family: Arial, sans-serif;
+    background: #e94f54;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    /* animation: gradientShift 10s ease infinite alternate; */
+}
+
+.center {
+    background-color: #ff9a9e;
+    HEIGHT: 715px;
+    width: 564px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center
+}
+
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 2px #fff;
+    color: crimson;
+}
+
+input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    font-size: 2em;
+    width: 200px;
+    text-align: center;
+    color: crimson;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff6f91;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin-left: 225px
+}
+
+button:hover {
+    background-color: crimson;
+}
+
+button:disabled {
+    background-color: rgba(255, 111, 145, 0.6);
+    cursor: not-allowed;
+}
+
+/* نتیجه */
+#result {
+    margin-top: 30px;
+    font-size: 1.5em;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+    height: 120px;
+    color: crimson;
+}
+
+
+#result.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* شخصیت کارتونی */
+#character {
+    width: 100px;
+    margin-top: 20px;
+}
+
+#img0 {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 140px;
+}
+
+/* .head {
+    width: 100px;
+    height: 100px;
+    background: #ffe0bd;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s;
+}
+
+.eye {
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.eye.left { margin-right: 10px; }
+.eye.right { margin-left: 10px; } */
+
+.mouth {
+    width: 40px;
+    height: 10px;
+    border-bottom: 4px solid black;
+    border-radius: 0 0 20px 20px;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+/* حالات احساسی */
+.happy .mouth {
+    border-bottom: 4px solid black;
+    border-radius: 0 0 20px 20px;
+    transform: rotate(0deg);
+}
+
+.surprised .mouth {
+    border-bottom: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: black;
+}
+
+.funny .mouth {
+    border-bottom: 4px solid black;
+    border-radius: 0 0 20px 20px;
+    transform: rotate(20deg);
+}
+
+.sad .mouth {
+    border-bottom: 4px solid black;
+    border-radius: 20px 20px 0 0;
+    transform: rotate(0deg);
+}
+
+/* موشن پرش */
+.jump {
+    animation: jump 0.3s;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* پس‌زمینه انیمیشن */
+@keyframes gradientShift {
+    0% {
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    }
+
+    50% {
+        background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    }
+
+    100% {
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    }
+}
